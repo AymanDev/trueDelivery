@@ -1,0 +1,26 @@
+{
+  "name": "hack.moscow.bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js localhost 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AymanDev/hack.moscow.bot.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/AymanDev/hack.moscow.bot/issues"
+  },
+  "homepage": "https://github.com/AymanDev/hack.moscow.bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "telegraf": "^3.33.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
