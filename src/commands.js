@@ -1,9 +1,9 @@
 import startCommand from "./commands/startCommand";
-import regCommand from "./commands/regCommand";
+import loadRegCommand from "./commands/regCommand";
 
 const loadCommands = (bot) => {
   bot.start(startCommand);
-  bot.command("reg", regCommand);
+  loadRegCommand(bot);
 };
 
 export default loadCommands;
