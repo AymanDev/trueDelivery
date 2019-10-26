@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js localhost 8080"
+    "babel-node": "babel-node --presets=latest",
+    "build": "babel src -d dist",
+    "start": "nodemon --exec npm run babel-node -- ./index.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,19 @@
   },
   "homepage": "https://github.com/AymanDev/hack.moscow.bot#readme",
   "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
     "dotenv": "^8.2.0",
     "telegraf": "^3.33.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   }
 }
