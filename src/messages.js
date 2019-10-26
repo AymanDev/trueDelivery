@@ -1,4 +1,4 @@
-export const START_MESSAGE = `Привет, я бот для доставки!
-Используй команду для регистрации: /reg
-Используя эту команду ты даешь разрешение на обработку персональных данных.
-Эта информация понадобится нам с тобой в дальнейшем для более быстрой и удобной работы ;)`;
+export const START_MESSAGE = `Hello, I'm bot for fast delivering from one to one!
+Use command : /reg 
+Using this command you are allowing us process personal data.
+This information required for faster and better work ;)`;
