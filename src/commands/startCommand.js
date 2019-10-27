@@ -12,11 +12,20 @@ const startCommand = async (ctx) => {
       .extra()
     );
   } else {
-    ctx.reply(START_MESSAGE_AUTHORIZED, Markup
-      .keyboard([["Maker order", "Checkout order"], "Cancel order"])
-      .oneTime()
-      .resize()
-      .extra());
+    if (ctx.state.isCourier) {
+      ctx.reply(START_MESSAGE_AUTHORIZED, Markup
+        .keyboard([["Get orders"]])
+        .oneTime()
+        .resize()
+        .extra());
+    } else {
+      ctx.reply(START_MESSAGE_AUTHORIZED, Markup
+        .keyboard([["Make order", "Get orders"]])
+        .oneTime()
+        .resize()
+        .extra());
+    }
+
   }
 };
 
