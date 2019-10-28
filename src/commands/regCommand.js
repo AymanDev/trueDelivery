@@ -65,6 +65,8 @@ const loadRegCommand = (bot) => {
         "Phone": ctx.message.text
       });
       await ctx.reply("Thank you for registering as courier!");
+      ctx.state.authorized = true;
+      ctx.state.isCourier = true;
     } catch (err) {
       await ctx.reply("Something went wrong. Unexpected error occurred!")
     }
@@ -85,6 +87,7 @@ const loadRegCommand = (bot) => {
         "DefaultAddressCoords": `${latitude},${longitude}`
       });
       ctx.reply("You registered successfully!");
+      ctx.state.authorized = true;
     } catch (err) {
       ctx.reply("While registering unexpected error occurred. Try register later!");
     }
